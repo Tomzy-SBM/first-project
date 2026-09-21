@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create Account</h1>
+        <p>Register to get started</p>
+        <form action="" method="post" id="register">
+            <h6 class="output"></h6>
+            <label for="firstname">FirstName:</label>
+            <input type="text" autocomplete="on" name="firstname" id="firstname" placeholder="Enter firstname" required>
+            <br><br>
+            <label for="lastname">LastName:</label>
+            <input type="text" autocomplete="on" name="lastname" id="lastname" placeholder="Enter lastname" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" autocomplete="on" name="email" id="email" placeholder="Enter email" required>
+            <br><br>
+            <label for="address">Address:</label>
+            <input type="text" autocomplete="on" name="address" id="address" placeholder="Enter address" required>
+            <br><br>
+            <label for="dateofbirth">Date of Birth:</label>
+            <input type="date" autocomplete="on" name="dateofbirth" id="dateofbirth" required>
+            <br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" autocomplete="on" name="phone" id="phone" placeholder="Enter phone number" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" autocomplete="on" name="password" id="password" placeholder="Enter password" required>
+            <br><br>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" autocomplete="on" name="confirmpassword" id="confirmpassword" placeholder="Confirm password" required>
+            <br><br>
+            <input type="submit" class="btn" value="Register">
+            <p class="account-text">
+                Already have an account?
+                <a href="login.html">LOGIN</a>
+            </p>
+        </form>
+    </div>
+
+ <script src="script.js"></script>   
+</body>
+</html>
