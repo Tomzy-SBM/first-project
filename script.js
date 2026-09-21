@@ -11,7 +11,7 @@ const output = document.querySelector(".output");
 register.addEventListener("submit", formHandler);
 function formHandler(e) {
     e.preventDefault();
-    if (firstname.value === "0") {
+    if (firstname.value === "") {
     output.innerHTML = "Please enter your firstname";
     output.style.color = "red";
     output.style.fontSize = "1.9rem";
@@ -26,6 +26,9 @@ function formHandler(e) {
     output.style.color = "red";
     output.style.fontSize = "1.9rem";
     output.style.fontFamily = "roboto";
+    }else if (localStorage.getItem("savedEmail") === email.value) {
+    output.innerHTML = "An account already exists with this email";
+    output.style.color = "red";
     } else if (address.value.length === 0) {
     output.innerHTML = "Please enter your address";
     output.style.color = "red";
@@ -46,8 +49,8 @@ function formHandler(e) {
     output.style.color = "red";
     output.style.fontSize = "1.9rem";
     output.style.fontFamily = "roboto";
-    }else if (password.value.length > 6) {
-    output.innerHTML = "Password cannot exceed 6 characters";
+    }else if (password.value.length < 6) {
+    output.innerHTML = "Password cannot be less than 6 characters";
     output.style.color = "red";
     output.style.fontSize = "1.9rem";
     output.style.fontFamily = "roboto";
@@ -62,8 +65,7 @@ function formHandler(e) {
     output.style.fontSize = "1.9rem";
     output.style.fontFamily = "roboto";
     }else {
-        alert = `Account Successfully Created !`
-        output.innerHTML= alert
+        output.innerHTML = `Account Successfully Created !`
         output.style.color= `green`
         output.style.fontSize= `14px`
 
@@ -78,7 +80,7 @@ function formHandler(e) {
 
         setTimeout(()=>{
             window.location.href = "login.html";
-        })
+        },1000);
         
     }
 }
